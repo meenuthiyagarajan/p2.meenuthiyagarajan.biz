@@ -13,7 +13,12 @@ class index_controller extends base_controller {
 	Accessed via http://localhost/index/index/
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
-		
+
+
+    # Get and print the current timestamp
+    
+
+	
 		# Any method that loads a view will commonly start with this
 		# First, set the content of the template with a view file
 			$this->template->content = View::instance('v_index_index');
@@ -32,6 +37,7 @@ class index_controller extends base_controller {
 	      					     		
 		# Render the view
 			echo $this->template;
+	
 
 	} # End of method
 	
