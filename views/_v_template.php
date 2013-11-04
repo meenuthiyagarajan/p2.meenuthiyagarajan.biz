@@ -5,8 +5,8 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 	<!-- Common CSS/JSS -->
-   // <link rel="stylesheet" href="/css/app.css" type="text/css">
-	//<link $client_files_head=Array('/css/profile.css',$this->template->client_files_head=<link> '/css/master.css');
+    
+	
 	
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -18,14 +18,35 @@
 
 <body>	
 
-	<?php if(isset($content)) echo $content; ?>
-	<?php if(isset($user_name)): ?>
-    <h1>This is the profile for <?=$user_name?></h1>
-<?php else: ?>
-    <h1>No user specified</h1>
-<?php endif; ?>
+	    <div id='menu'>
 
+        <a href='/'>Home</a>
 
-	<?php if(isset($client_files_body)) echo $client_files_body; ?>
+        <!-- Menu for users who are logged in -->
+        <?php if($user): ?>
+
+            <a href='/users/logout'>Logout</a>
+            <a href='/users/profile'>Profile</a>
+
+        <!-- Menu options for users who are not logged in -->
+        <?php else: ?>
+
+            <a href='/users/signup'>Sign up</a>
+            <a href='/users/login'>Log in</a>
+
+        
+		<a href='/users/posts'> Add post </a><br>
+		<a href='/users/posts'> View post</a><br>
+		<a href='/users/posts'> Follow users</a><br>
+		<?php endif ?>
+
+    </div>
+
+    <br>
+
+    <?php if(isset($content)) echo $content; ?>
+
 </body>
+
+
 </html>
