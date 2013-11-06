@@ -118,7 +118,7 @@ class Email {
 			else {
 				return true;
 			}
-			$mail             = new PHPMailer(); // defaults to using php "mail()"
+			   /*$mail= new PHPMailer(); // defaults to using php "mail()"
 			# Build a multi-dimension array of recipients of this email
 $to[] = Array("name" => "meenu", "email" => "meenu.gandhi@ymail.com");
 
@@ -140,7 +140,7 @@ $cc  = "";
 $bcc = "";
 
 # With everything set, send the email
-$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc);
+$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc);*/
 
 			
 	} # eof
