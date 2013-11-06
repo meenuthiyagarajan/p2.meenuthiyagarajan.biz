@@ -20,7 +20,7 @@
 
 	    <div id='menu'>
 
-        <a href='/'>Home</a><br>
+        <a href='/'>Home</a><br><br>
 
         <!-- Menu for users who are logged in -->
         <?php if($user): ?>
@@ -29,20 +29,15 @@
 		    <a href='/posts/users'> Follow users</a><br>
             <a href='/users/logout'>Logout</a><br>
             <a href='/users/p_profile'>Profile</a><br>
+			<a href='/users/p_email'>Email</a><br>
 
         <!-- Menu options for users who are not logged in -->
         <?php else: ?>
 
-            <a href='/users/signup'>Sign up</a>
-            <a href='/users/login'>Log in</a>
-
-        
-		<a href='/users/posts/p_add'> Add post </a><br>
-		<a href='/users/posts/index'> View post</a><br>
-		<a href='/users/posts/users'> Follow users</a><br>
-		<?php endif ?>
-
-    
+            <a href='/users/signup'>Sign up</a><br><br>
+            <a href='/users/login'>Log in</a><br><br>       
+		
+		<?php endif ?>   
 
     <?php if(isset($error)): ?>
         <div class='error'>
@@ -51,9 +46,7 @@
         <br>
     <?php endif; ?>
 
-    
-
-</form>
+    </form>
 
 
     <?php if(isset($content)) echo $content; ?>
