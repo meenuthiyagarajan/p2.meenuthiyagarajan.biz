@@ -1,5 +1,11 @@
-<?php if(isset($user_name)): ?>
-    <h1>This is the profile for <?=$user->first_name?></h1>
-<?php else: ?>
-    <h1>No user specified</h1>
-<?php endif; ?>
+
+<form action="/users/p_profile_edit" method="post"
+ enctype="multipart/form-data">
+ <label for="file">Upload a photo:</label>
+ <input type="file" name="file" id="file"><br>
+ <input type="submit" name="submit" value="Submit"><br><br>
+ 
+ 
+
+		
+ </form>

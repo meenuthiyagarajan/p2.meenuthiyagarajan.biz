@@ -3,7 +3,7 @@ class users_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
-        echo "users_controller construct called<br><br>";
+        //echo "users_controller construct called<br><br>";
     } 
 
     public function index() {
@@ -21,21 +21,50 @@ class users_controller extends base_controller {
 
         # Render template
             echo $this->template;
+			}
+			#Helper function to validate field empty
+			
+		private function field() {
+		# Setup view
+            $this->template->content = View::instance('v_users_signup');
+            $this->template->title   = "Sign Up";
 
-    }
+        # Render template
+            echo $this->template;
+		
+		if(trim($_POST['first_name'])==false){
+		echo "Fill in Firstname";
+		return false;}
+		elseif(trim($_POST['last_name'])==false){
+		echo"Fill in Lastname";
+		return false;}
+		elseif(trim($_POST['password'])==false){
+		echo"Fill in the password";
+		return false;}
+		 else{
+		return true;
+		}
+		}
+			
+		
+		
+
+    
 
     public function p_signup() {
+	
+		
 
         # Dump out the results of POST to see what the form submitted
         echo '<pre>';
-       // print_r($_POST);
-	   //	   $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
+        print_r($_POST);
+	   	 $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
        # More data we want stored with the user
-    //$_POST['created']  = Time::now();
-    //$_POST['modified'] = Time::now();
+    $_POST['created']  = Time::now();
+    $_POST['modified'] = Time::now();
 
     # Insert this user into the database
-    //$user_id = DB::instance(DB_NAME)->insert('users', $_POST);
+    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
     # For now, just confirm they've signed up - 
     # You should eventually make a proper View for this
@@ -51,37 +80,39 @@ class users_controller extends base_controller {
 
     # Insert this user into the database 
     $user_id = DB::instance(DB_NAME)->insert("users", $_POST);
-
+	
     # For now, just confirm they've signed up - 
     # You should eventually make a proper View for this
     echo 'You\'re signed up';
     echo '</pre>';          
     }
+	
+		
+		
 
 
 
-	//public function p_signup() {
-	//$this->template->content=view::Instance('v_users_signup');
-	//echo $this->template;
-	//echo "<pre>";
-	//print_r($_POST);
-	//echo "<pre>";
-	//DB::INSTANCE(DB_NAME)->insert_row('users',$_POST);
-	//}
-
-    
-	public function login() {
+	/*public function p_signup() {
+	$this->template->content=view::Instance('v_users_signup');
+	echo $this->template;
+	echo "<pre>";
+	print_r($_POST);
+	echo "<pre>";
+	DB::INSTANCE(DB_NAME)->insert_row('users',$_POST);
+	}*/    
+	 public function login($error = NULL) {
 
     # Setup view
         $this->template->content = View::instance('v_users_login');
         $this->template->title   = "Login";
+		$this->template->content->error = $error;
 
     # Render template
         echo $this->template;
 
         
     }
-	 /*public function login($error = NULL) {
+	/* public function p_login($error = NULL) {
 
     # Set up the view
     $this->template->content = View::instance("v_users_login");
@@ -160,7 +191,7 @@ class users_controller extends base_controller {
 }
 
 
-    public function profile() {
+    public function p_profile() {
 
     # If user is blank, they're not logged in; redirect them to the login page
     if(!$this->user) {
@@ -175,8 +206,61 @@ class users_controller extends base_controller {
 
     # Render template
     echo $this->template;
-}
-   /* public function profile($user_name = NULL) {
+	}
+
+ public function p_profile_edit() {
+if ($_FILES["file"]["error"] > 0)
+   {
+   echo "Error: " . $_FILES["file"]["error"] . "<br>";
+   }
+ else
+   {
+   echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+   echo "Type: " . $_FILES["file"]["type"] . "<br>";
+   echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+   echo "Stored in: " . $_FILES["file"]["tmp_name"];
+   }
+   $allowedExts = array("gif", "jpeg", "jpg", "png");
+ $temp = explode(".", $_FILES["file"]["name"]);
+$extension = end($temp);
+ if ((($_FILES["file"]["type"] == "image/gif")
+ || ($_FILES["file"]["type"] == "image/jpeg")
+ || ($_FILES["file"]["type"] == "image/jpg")
+|| ($_FILES["file"]["type"] == "image/pjpeg")
+|| ($_FILES["file"]["type"] == "image/x-png")
+ || ($_FILES["file"]["type"] == "image/png"))
+ && ($_FILES["file"]["size"] < 20000)
+ && in_array($extension, $allowedExts))
+   {
+   if ($_FILES["file"]["error"] > 0)
+     {
+     echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+     }
+   else
+     {
+     echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+     echo "Type: " . $_FILES["file"]["type"] . "<br>";
+     echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+     echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+
+     if (file_exists("upload/" . $_FILES["file"]["name"]))
+       {
+       echo $_FILES["file"]["name"] . " already exists. ";
+       }
+     else
+       {
+       move_uploaded_file($_FILES["file"]["tmp_name"],
+       "upload/" . $_FILES["file"]["name"]);
+       echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+       }
+     }
+   }
+ else
+   {
+   echo "Invalid file";
+   }
+   
+    //public function p_profile($user_name = NULL) {
 	//$template=view::Instance('_v_template');
 
     /*
@@ -186,7 +270,7 @@ class users_controller extends base_controller {
     */
     //$this->template->content = View::instance('v_users_profile');
 
-    // $title is another variable used in _v_template to set the <title> of the page
+     //$title is another variable used in _v_template to set the <title> of the page
 	
     //$this->template->title = "Profile";
 
@@ -202,7 +286,7 @@ class users_controller extends base_controller {
 
 
 
-//}
+//
 
 	  //    if($user_name == NULL) {
     //        echo "No user specified";
@@ -210,7 +294,8 @@ class users_controller extends base_controller {
        // else {
        //    echo "This is the profile for ".$user_name;
        // }
-   // }
-//} 
+    
+	
 }
-?>
+}
+

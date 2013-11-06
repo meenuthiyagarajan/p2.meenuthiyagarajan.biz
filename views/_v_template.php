@@ -20,13 +20,15 @@
 
 	    <div id='menu'>
 
-        <a href='/'>Home</a>
+        <a href='/'>Home</a><br>
 
         <!-- Menu for users who are logged in -->
         <?php if($user): ?>
-
-            <a href='/users/logout'>Logout</a>
-            <a href='/users/profile'>Profile</a>
+           <a href='/posts/add'> Add post </a><br>
+		   <a href='/posts/p_add'> View post</a><br>
+		    <a href='/posts/users'> Follow users</a><br>
+            <a href='/users/logout'>Logout</a><br>
+            <a href='/users/p_profile'>Profile</a><br>
 
         <!-- Menu options for users who are not logged in -->
         <?php else: ?>
@@ -35,14 +37,24 @@
             <a href='/users/login'>Log in</a>
 
         
-		<a href='/users/posts'> Add post </a><br>
-		<a href='/users/posts'> View post</a><br>
-		<a href='/users/posts'> Follow users</a><br>
+		<a href='/users/posts/p_add'> Add post </a><br>
+		<a href='/users/posts/index'> View post</a><br>
+		<a href='/users/posts/users'> Follow users</a><br>
 		<?php endif ?>
 
-    </div>
+    
 
-    <br>
+    <?php if(isset($error)): ?>
+        <div class='error'>
+            Login failed. Please double check your email and password.
+        </div>
+        <br>
+    <?php endif; ?>
+
+    
+
+</form>
+
 
     <?php if(isset($content)) echo $content; ?>
 
