@@ -1,0 +1,100 @@
+2013-11-05 21:07:46 - INFO --> -------------------------- 
+2013-11-05 21:07:46 - INFO --> Controller/Method: users/p_login 
+2013-11-05 21:07:46 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
+2013-11-05 21:07:46 - INFO --> To: Blogger (meenuthiyagarajan@g.harvard.edu),  
+2013-11-05 21:07:46 - INFO --> CC:  
+2013-11-05 21:07:46 - INFO --> BCC:  
+2013-11-05 21:07:46 - INFO --> Subject: Blogger SQL Error 
+2013-11-05 21:07:46 - INFO --> Body: <h2>SQL Error</h2>Unknown MySQL server host 'meenuthi_p2_meenuthiyagarajan_biz' (1)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => f9e97b8c07f6134f274d7d7554cd175d
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => sam.peter@gm 
+2013-11-05 21:22:41 - INFO --> -------------------------- 
+2013-11-05 21:22:41 - INFO --> Controller/Method: users/p_login 
+2013-11-05 21:22:41 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
+2013-11-05 21:22:41 - INFO --> To: Blogger (meenuthiyagarajan@g.harvard.edu),  
+2013-11-05 21:22:41 - INFO --> CC:  
+2013-11-05 21:22:41 - INFO --> BCC:  
+2013-11-05 21:22:41 - INFO --> Subject: Blogger SQL Error 
+2013-11-05 21:22:41 - INFO --> Body: <h2>SQL Error</h2>Unknown MySQL server host 'meenuthi_p2_meenuthiyagarajan_biz' (1)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => f9e97b8c07f6134f274d7d7554cd175d
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => sam.peter@gm 
+2013-11-05 21:23:08 - INFO --> -------------------------- 
+2013-11-05 21:23:08 - INFO --> Controller/Method: users/p_login 
+2013-11-05 21:23:08 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
+2013-11-05 21:23:08 - INFO --> To: Blogger (meenuthiyagarajan@g.harvard.edu),  
+2013-11-05 21:23:08 - INFO --> CC:  
+2013-11-05 21:23:08 - INFO --> BCC:  
+2013-11-05 21:23:08 - INFO --> Subject: Blogger SQL Error 
+2013-11-05 21:23:08 - INFO --> Body: <h2>SQL Error</h2>Unknown MySQL server host 'meenuthi_p2_meenuthiyagarajan_biz' (1)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => f9e97b8c07f6134f274d7d7554cd175d
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => meenu.gandhi 
+2013-11-05 21:24:31 - INFO --> -------------------------- 
+2013-11-05 21:24:31 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 21:24:31 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
+2013-11-05 21:24:31 - INFO --> To: Blogger (meenuthiyagarajan@g.harvard.edu),  
+2013-11-05 21:24:31 - INFO --> CC:  
+2013-11-05 21:24:31 - INFO --> BCC:  
+2013-11-05 21:24:31 - INFO --> Subject: Blogger SQL Error 
+2013-11-05 21:24:31 - INFO --> Body: <h2>SQL Error</h2>Unknown MySQL server host 'meenuthi_p2_meenuthiyagarajan_biz' (1)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_signup<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => 5361a2c50299acee451b45de46c57786
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [first_name] => alain
+ 
+2013-11-05 21:25:13 - INFO --> -------------------------- 
+2013-11-05 21:25:13 - INFO --> Controller/Method: users/p_login 
+2013-11-05 21:25:13 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
+2013-11-05 21:25:13 - INFO --> To: Blogger (meenuthiyagarajan@g.harvard.edu),  
+2013-11-05 21:25:13 - INFO --> CC:  
+2013-11-05 21:25:13 - INFO --> BCC:  
+2013-11-05 21:25:13 - INFO --> Subject: Blogger SQL Error 
+2013-11-05 21:25:13 - INFO --> Body: <h2>SQL Error</h2>Unknown MySQL server host 'meenuthi_p2_meenuthiyagarajan_biz' (1)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => 5361a2c50299acee451b45de46c57786
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => alain_ibrahi 
+2013-11-05 21:32:03 - INFO --> -------------------------- 
+2013-11-05 21:32:03 - INFO --> Controller/Method: users/p_login 
+2013-11-05 21:32:03 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
+2013-11-05 21:32:03 - INFO --> To: Blogger (meenuthiyagarajan@g.harvard.edu),  
+2013-11-05 21:32:03 - INFO --> CC:  
+2013-11-05 21:32:03 - INFO --> BCC:  
+2013-11-05 21:32:03 - INFO --> Subject: Blogger SQL Error 
+2013-11-05 21:32:03 - INFO --> Body: <h2>SQL Error</h2>Unknown MySQL server host 'meenuthi_p2_meenuthiyagarajan_biz' (1)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => 5361a2c50299acee451b45de46c57786
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => alain_ibrahi 
+2013-11-05 21:32:17 - INFO --> -------------------------- 
+2013-11-05 21:32:17 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 21:32:18 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
+2013-11-05 21:32:18 - INFO --> To: Blogger (meenuthiyagarajan@g.harvard.edu),  
+2013-11-05 21:32:18 - INFO --> CC:  
+2013-11-05 21:32:18 - INFO --> BCC:  
+2013-11-05 21:32:18 - INFO --> Subject: Blogger SQL Error 
+2013-11-05 21:32:18 - INFO --> Body: <h2>SQL Error</h2>Unknown MySQL server host 'meenuthi_p2_meenuthiyagarajan_biz' (1)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_signup<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => 5361a2c50299acee451b45de46c57786
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [first_name] => alain
+ 
