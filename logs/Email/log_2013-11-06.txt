@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2013-11-06 9:45:00 - INFO --> -------------------------- 
 2013-11-06 9:45:00 - INFO --> Controller/Method: users/p_signup 
 2013-11-06 9:45:00 - INFO --> From: Blogger (meenuthiyagarajan@g.harvard.edu) 
@@ -220,3 +221,5 @@
 ) 
 2013-11-06 13:16:43 - INFO --> FAILED TO SEND EMAIL 
 >>>>>>> 808e52be9bc2940a06adb04246e5ff4e627369aa
+=======
+>>>>>>> e8a42c78b26c94ebed9e1f8aea56e06c44bb1b68
