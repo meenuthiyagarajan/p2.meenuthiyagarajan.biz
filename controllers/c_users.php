@@ -259,6 +259,38 @@ $extension = end($temp);
    {
    echo "Invalid file";
    }
+   }
+   public function email() {
+    # Setup view
+            $this->template->content = View::instance('v_users_email');
+            $this->template->title   = "Email";
+
+        # Render template
+            echo $this->template;
+			}
+	public function p_email() {
+	if (isset($_REQUEST['email']))
+ //if "email" is filled out, send email
+   {
+   //send email
+   $email = $_REQUEST['email'] ;
+   $subject = $_REQUEST['subject'] ;
+   $message = $_REQUEST['message'] ;
+      ini_set("SMTP","mail.example.com");  
+   echo "Thank you for using our mail form";
+   }
+    
+ else
+ { echo "<form method='post' action='/users/p_email'>
+   Email: <input name='email' type='text'><br>
+   Subject: <input name='subject' type='text'><br>
+   Message:<br>
+   <textarea name='message' rows='15' cols='40'>
+   </textarea><br>
+   <input type='submit'>
+   </form>";
+ }
+   
    
     //public function p_profile($user_name = NULL) {
 	//$template=view::Instance('_v_template');
@@ -297,5 +329,6 @@ $extension = end($temp);
     
 	
 }
-}
 
+
+}
